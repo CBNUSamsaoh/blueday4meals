@@ -24,7 +24,6 @@ drawable rectangle_style
 drawable rectangle_white
 font dongle
 font mainfont
-id adult
 id breakfast
 id btn_login
 id btn_register
