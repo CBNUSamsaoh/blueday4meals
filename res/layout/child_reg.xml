@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#E4DDFF"
+    tools:context=".MainActivity">
+
+    <ImageView
+    android:id="@+id/imageView4"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="37dp"
+    android:layout_marginBottom="199dp"
+    android:alpha="0.75"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:srcCompat="@drawable/login_pic1" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="37dp"
+        android:alpha="0.75"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/login_pic2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="37dp"
+        android:alpha="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_pic3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="199dp"
+        android:layout_marginEnd="37dp"
+        android:alpha="0.75"
+        android:rotation="27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_pic4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <com.example.myapplication.CustomTextOutLineView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dongle"
+            android:gravity="center"
+            android:text="회원가입"
+            android:layout_weight="2"
+            android:textColor="#CEC2FF"
+            android:textSize="80sp"
+            app:textStroke="true"
+            app:textStrokeColor="#E4E7FF"
+            app:textStrokeWidth="20.0" />
+
+        <EditText
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/dongle"
+            android:hint="아이디"
+            android:inputType="text"
+            android:maxLength="50"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:fontFamily="@font/dongle"
+            android:textSize="30dp"
+            android:maxLength="50"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/pwc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:hint="비밀번호 확인"
+            android:inputType="textPassword"
+            android:fontFamily="@font/dongle"
+            android:textSize="30dp"
+            android:maxLength="50"
+            android:layout_weight="1"/>
+
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.example.myapplication.CustomButtonOutLineView
+            android:id="@+id/city1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="도"
+            android:fontFamily="@font/dongle"
+            android:background="@drawable/round_button"
+            android:layout_weight="1"
+            android:textColor="#E4E7FF"
+            android:textSize="40sp"
+            app:textStroke="true"
+            app:textStrokeColor="#CEC2FF"
+            app:textStrokeWidth="20.0"
+            />
+
+        <com.example.myapplication.CustomButtonOutLineView
+            android:id="@+id/city2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="시"
+            android:fontFamily="@font/dongle"
+            android:textColor="#E4E7FF"
+            android:textSize="40sp"
+            app:textStroke="true"
+            app:textStrokeColor="#CEC2FF"
+            app:textStrokeWidth="20.0"
+            android:background="@drawable/round_button"
+            android:layout_weight="1"
+            />
+
+        <com.example.myapplication.CustomButtonOutLineView
+            android:id="@+id/city3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="동"
+            android:fontFamily="@font/dongle"
+            android:textColor="#E4E7FF"
+            android:textSize="40sp"
+            app:textStroke="true"
+            app:textStrokeColor="#CEC2FF"
+            app:textStrokeWidth="20.0"
+            android:background="@drawable/round_button"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <com.example.myapplication.CustomRadioOutlineView
+                android:id="@+id/rg_btn1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_button"
+                android:fontFamily="@font/dongle"
+                android:gravity="center_vertical"
+                android:text="     남"
+                android:textColor="#E4E7FF"
+                android:textSize="40sp"
+                app:textStroke="true"
+                app:textStrokeColor="#CEC2FF"
+                app:textStrokeWidth="20.0" />
+
+            <com.example.myapplication.CustomRadioOutlineView
+                android:id="@+id/rg_btn2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_button"
+                android:fontFamily="@font/dongle"
+                android:gravity="center_vertical"
+                android:text="     여"
+                android:textColor="#E4E7FF"
+                android:textSize="40sp"
+                app:textStroke="true"
+                app:textStrokeColor="#CEC2FF"
+                app:textStrokeWidth="20.0" />
+
+        </RadioGroup>
+
+        <com.example.myapplication.CustomButtonOutLineView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tmoney"
+            android:gravity="center"
+            android:text="등록하기"
+            android:background="#00FFFFFF"
+            android:layout_weight="1"
+            android:textColor="#E4E7FF"
+            android:textSize="40sp"
+            app:textStroke="true"
+            app:textStrokeColor="#CEC2FF"
+            app:textStrokeWidth="20.0"
+            />
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
