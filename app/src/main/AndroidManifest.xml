@@ -2,11 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
-    <!-- 권한 추가 -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -18,6 +16,8 @@
         android:theme="@style/Theme.Blueday4meals"
         android:usesCleartextTraffic="true"
         tools:targetApi="31"
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="whateverString"
         android:networkSecurityConfig="@xml/network_security_config">
         <meta-data
             android:name="com.google.android.actions"
@@ -26,6 +26,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,8 +38,8 @@
                 android:value="" />
         </activity>
         <meta-data
-            android:name="com.kakao.sdk.AppKey"
-            android:value="613fbd6e077675ee11f70b6d56ff346b" />
-    </application>
-
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="g9m45hxvbu" />
+   </application>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 </manifest>

@@ -1,5 +1,7 @@
 R_DEF: Internal format may change without notice
 local
+array reply_entries
+array reply_values
 attr? textStroke
 attr? textStrokeColor
 attr? textStrokeWidth
@@ -19,6 +21,7 @@ drawable login_pic1
 drawable login_pic2
 drawable login_pic3
 drawable login_pic4
+drawable marker
 drawable rectangle_purple
 drawable rectangle_style
 drawable rectangle_white
@@ -39,6 +42,7 @@ id imageView4
 id left_cals
 id login
 id lunch
+id map_view
 id nutrient
 id parent
 id photo
@@ -51,8 +55,19 @@ layout register
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string attachment_summary_off
+string attachment_summary_on
+string attachment_title
+string hello_blank_fragment
+string messages_header
+string reply_title
+string signature_title
+string sync_header
+string sync_title
 style Theme.Blueday4meals
 styleable CustomTextOutLineView textStroke textStrokeWidth textStrokeColor
 xml backup_rules
 xml daily_consumption_scene
 xml data_extraction_rules
+xml network_security_config
+xml root_preferences
