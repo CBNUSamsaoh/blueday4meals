@@ -5,7 +5,7 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="33"
+8        android:minSdkVersion="31"
 8-->/Users/jingyeong/Documents/GitHub/blueday4meals/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="33" />
 9-->/Users/jingyeong/Documents/GitHub/blueday4meals/app/src/main/AndroidManifest.xml

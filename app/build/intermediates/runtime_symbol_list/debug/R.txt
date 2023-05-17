@@ -3353,7 +3353,7 @@ int id login 0x7f0a0105
 int id ltr 0x7f0a0106
 int id lunch 0x7f0a0107
 int id m3_side_sheet 0x7f0a0108
-int id map_view 0x7f0a0109
+int id map 0x7f0a0109
 int id marquee 0x7f0a010a
 int id masked 0x7f0a010b
 int id match_constraint 0x7f0a010c

@@ -42,7 +42,7 @@ id imageView4
 id left_cals
 id login
 id lunch
-id map_view
+id map
 id nutrient
 id parent
 id photo
