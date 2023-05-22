@@ -3208,6 +3208,7 @@ id callMeasure
 id cancel_action
 id cancel_button
 id carryVelocity
+id cb_autoLogin
 id center
 id centerCrop
 id centerInside
@@ -3246,6 +3247,7 @@ id currentState
 id custom
 id customPanel
 id cut
+id cv_nutrition
 id dark
 id date_picker_actions
 id decelerate
@@ -3360,6 +3362,7 @@ id light
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
 id list_item
 id locale
@@ -3398,6 +3401,7 @@ id media_actions
 id message
 id middle
 id mini
+id monthSpinner
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3490,6 +3494,10 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
+id pb_carbs
+id pb_fat
+id pb_fiber
+id pb_protein
 id peekHeight
 id percent
 id photo
@@ -3650,6 +3658,18 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_carbsIntake
+id tv_carbsStandard
+id tv_energyIntake
+id tv_energyStandard
+id tv_fatIntake
+id tv_fatStandard
+id tv_fiberIntake
+id tv_fiberStandard
+id tv_month
+id tv_proteinIntake
+id tv_proteinStandard
+id tv_year
 id unchecked
 id uniform
 id unlabeled
@@ -3674,6 +3694,7 @@ id wrap_content
 id wrap_content_constrained
 id x_left
 id x_right
+id yearSpinner
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -3881,6 +3902,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout nutrition_main
 layout preference
 layout preference_category
 layout preference_category_material

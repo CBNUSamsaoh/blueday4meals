@@ -3207,6 +3207,7 @@ int id callMeasure 0x7f0a006f
 int id cancel_action 0x7f0a0070
 int id cancel_button 0x7f0a0071
 int id carryVelocity 0x7f0a0072
+int id cb_autoLogin 0x7f0a0259
 int id center 0x7f0a0073
 int id centerCrop 0x7f0a0074
 int id centerInside 0x7f0a0075
@@ -3245,6 +3246,7 @@ int id currentState 0x7f0a0095
 int id custom 0x7f0a0096
 int id customPanel 0x7f0a0097
 int id cut 0x7f0a0098
+int id cv_nutrition 0x7f0a0245
 int id dark 0x7f0a0099
 int id date_picker_actions 0x7f0a009a
 int id decelerate 0x7f0a009b
@@ -3359,6 +3361,7 @@ int id light 0x7f0a0107
 int id line1 0x7f0a0108
 int id line3 0x7f0a0109
 int id linear 0x7f0a010a
+int id linearLayout 0x7f0a0246
 int id listMode 0x7f0a010b
 int id list_item 0x7f0a010c
 int id locale 0x7f0a010d
@@ -3397,6 +3400,7 @@ int id media_actions 0x7f0a012d
 int id message 0x7f0a012e
 int id middle 0x7f0a012f
 int id mini 0x7f0a0130
+int id monthSpinner 0x7f0a0247
 int id month_grid 0x7f0a0131
 int id month_navigation_bar 0x7f0a0132
 int id month_navigation_fragment_toggle 0x7f0a0133
@@ -3489,6 +3493,10 @@ int id parent_matrix 0x7f0a0189
 int id password_toggle 0x7f0a018a
 int id path 0x7f0a018b
 int id pathRelative 0x7f0a018c
+int id pb_carbs 0x7f0a0248
+int id pb_fat 0x7f0a0249
+int id pb_fiber 0x7f0a024a
+int id pb_protein 0x7f0a024b
 int id peekHeight 0x7f0a018d
 int id percent 0x7f0a018e
 int id photo 0x7f0a018f
@@ -3649,6 +3657,18 @@ int id transition_position 0x7f0a0229
 int id transition_scene_layoutid_cache 0x7f0a022a
 int id transition_transform 0x7f0a022b
 int id triangle 0x7f0a022c
+int id tv_carbsIntake 0x7f0a024c
+int id tv_carbsStandard 0x7f0a024d
+int id tv_energyIntake 0x7f0a024e
+int id tv_energyStandard 0x7f0a024f
+int id tv_fatIntake 0x7f0a0250
+int id tv_fatStandard 0x7f0a0251
+int id tv_fiberIntake 0x7f0a0252
+int id tv_fiberStandard 0x7f0a0253
+int id tv_month 0x7f0a0254
+int id tv_proteinIntake 0x7f0a0255
+int id tv_proteinStandard 0x7f0a0256
+int id tv_year 0x7f0a0257
 int id unchecked 0x7f0a022d
 int id uniform 0x7f0a022e
 int id unlabeled 0x7f0a022f
@@ -3673,6 +3693,7 @@ int id wrap_content 0x7f0a0241
 int id wrap_content_constrained 0x7f0a0242
 int id x_left 0x7f0a0243
 int id x_right 0x7f0a0244
+int id yearSpinner 0x7f0a0258
 int integer abc_config_activityDefaultDur 0x7f0b0000
 int integer abc_config_activityShortDur 0x7f0b0001
 int integer app_bar_elevation_anim_duration 0x7f0b0002
@@ -3880,6 +3901,7 @@ int layout notification_template_media 0x7f0d007a
 int layout notification_template_media_custom 0x7f0d007b
 int layout notification_template_part_chronometer 0x7f0d007c
 int layout notification_template_part_time 0x7f0d007d
+int layout nutrition_main 0x7f0d0096
 int layout preference 0x7f0d007e
 int layout preference_category 0x7f0d007f
 int layout preference_category_material 0x7f0d0080
