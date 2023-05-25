@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VSCode.blueday4meals.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VSCode.blueday4meals.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VSCode.blueday4meals.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VSCode.blueday4meals.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/blueday4meals.iml" filepath="$PROJECT_DIR$/.idea/modules/blueday4meals.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/blueday4meals.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/blueday4meals.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/blueday4meals.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/blueday4meals.app.androidTest.iml" />
