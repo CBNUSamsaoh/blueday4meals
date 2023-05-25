@@ -1,87 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/cid"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="아이디"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="190dp"
+        android:gravity="center|center_vertical"
+        android:text="REGISTER"
+        android:textColor="#CEC2FF"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="57dp" />
+
+    <com.example.blueday4meals.CustomButtonOutLineView
+        android:id="@+id/child"
+        android:layout_width="178dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="77dp"
+        android:gravity="center_horizontal|center"
+        android:text="아동"
+        android:fontFamily="@font/dongle"
+        android:layout_weight="1"
+        android:textColor="#E4E7FF"
+        android:background="@color/purple"
+        android:textSize="70sp"
+        app:textStroke="true"
+        app:textStrokeColor="#CEC2FF"
+        app:textStrokeWidth="20.0"
+        app:layout_constraintEnd_toStartOf="@+id/parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/register" />
 
-    <EditText
-        android:id="@+id/cpwd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="비밀번호"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/cid"
-        app:layout_constraintStart_toStartOf="@+id/cid"
-        app:layout_constraintTop_toBottomOf="@+id/cid" />
+    <com.example.blueday4meals.CustomButtonOutLineView
+        android:id="@+id/parent"
+        android:layout_width="178dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="77dp"
+        android:gravity="center_horizontal|center"
+        android:text="부모"
+        android:fontFamily="@font/dongle"
+        android:layout_weight="1"
+        android:textColor="#E4E7FF"
+        android:background="@color/purple"
+        android:textSize="70sp"
+        app:textStroke="true"
+        app:textStrokeColor="#CEC2FF"
+        app:textStrokeWidth="20.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/child"
+        app:layout_constraintTop_toBottomOf="@+id/register" />
 
-    <EditText
-        android:id="@+id/cBirth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="생년월일"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/cpwd"
-        app:layout_constraintStart_toStartOf="@+id/cpwd"
-        app:layout_constraintTop_toBottomOf="@+id/cpwd" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="232dp"
+        android:alpha="0.75"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/login_pic1" />
 
-    <EditText
-        android:id="@+id/cGender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="성별"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/cBirth"
-        app:layout_constraintStart_toStartOf="@+id/cBirth"
-        app:layout_constraintTop_toBottomOf="@+id/cBirth" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="37dp"
+        android:alpha="0.75"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/login_pic2" />
 
-    <EditText
-        android:id="@+id/cRegion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="거주지역"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/cGender"
-        app:layout_constraintStart_toStartOf="@+id/cGender"
-        app:layout_constraintTop_toBottomOf="@+id/cGender" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="37dp"
+        android:alpha="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_pic3" />
 
-    <Button
-        android:id="@+id/btn_signup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="회원가입"
-        app:layout_constraintEnd_toEndOf="@+id/cGender"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/cGender"
-        app:layout_constraintTop_toBottomOf="@+id/cGender" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="199dp"
+        android:layout_marginEnd="37dp"
+        android:alpha="0.75"
+        android:rotation="27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_pic4" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

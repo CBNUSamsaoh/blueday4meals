@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- 인터넷 권한 선언-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,23 +15,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Blueday4meals"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
-        <activity
-            android:name=".MainActivity"/>
-        <activity android:name=".RegisterActivity"/>
-        <activity android:name=".LoginActivity"
-            android:exported="true">
+        tools:targetApi="31"
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="whateverString">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/network_security_config" />
+        <activity android:name=".NaverMapMain"/>
+        <activity android:name=".ChildRegisterActivity"/>
+        <activity android:name=".ParentsRegisterActivity"/>
+        <activity android:name=".ChildMainPage"/>
+        <activity android:name=".ParentMainPage"/>
+        <activity android:name=".CameraMain"/>
+        <activity android:name=".SettingMain"/>
+        <activity android:name=".NutrientMain"/>
+        <activity android:name=".LoginActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity android:name=".RegisterType"/>
-    </application>
-
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="g9m45hxvbu" />
+   </application>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 </manifest>

@@ -5,19 +5,39 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="33"
+        android:minSdkVersion="31"
         android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <queries>
+
+        <!-- Needs to be explicitly declared on Android R+ -->
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
 
     <permission
         android:name="com.example.blueday4meals.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.example.blueday4meals.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- 인터넷 권한 선언 -->
+    <uses-permission android:name="com.example.blueday4meals.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
     <application
         android:allowBackup="true"
-        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:appComponentFactory="whateverString"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:debuggable="true"
         android:extractNativeLibs="false"
@@ -28,8 +48,18 @@
         android:testOnly="true"
         android:theme="@style/Theme.Blueday4meals"
         android:usesCleartextTraffic="true" >
-        <activity android:name="com.example.blueday4meals.MainActivity" />
-        <activity android:name="com.example.blueday4meals.RegisterActivity" />
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/network_security_config" />
+
+        <activity android:name="com.example.blueday4meals.NaverMapMain" />
+        <activity android:name="com.example.blueday4meals.ChildRegisterActivity" />
+        <activity android:name="com.example.blueday4meals.ParentsRegisterActivity" />
+        <activity android:name="com.example.blueday4meals.ChildMainPage" />
+        <activity android:name="com.example.blueday4meals.ParentMainPage" />
+        <activity android:name="com.example.blueday4meals.CameraMain" />
+        <activity android:name="com.example.blueday4meals.SettingMain" />
+        <activity android:name="com.example.blueday4meals.NutrientMain" />
         <activity
             android:name="com.example.blueday4meals.LoginActivity"
             android:exported="true" >
@@ -45,6 +75,38 @@
         </activity>
         <activity android:name="com.example.blueday4meals.RegisterType" />
 
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="g9m45hxvbu" />
+
+        <activity
+            android:name="com.naver.maps.map.app.LegendActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="@string/navermap_legend"
+            android:theme="@style/navermap_app" />
+        <activity
+            android:name="com.naver.maps.map.app.LegalNoticeActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="@string/navermap_legal_notice"
+            android:theme="@style/navermap_app" />
+        <activity
+            android:name="com.naver.maps.map.app.OpenSourceLicenseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:label="@string/navermap_open_source_license"
+            android:theme="@style/navermap_app" /> <!-- Needs to be explicitly declared on P+ -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.example.blueday4meals.androidx-startup"
@@ -56,6 +118,13 @@
                 android:name="androidx.lifecycle.ProcessLifecycleInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
     </application>
 
 </manifest>

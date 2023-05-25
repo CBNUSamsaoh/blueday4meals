@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 public class RegisterType extends AppCompatActivity {
 
@@ -21,7 +20,7 @@ public class RegisterType extends AppCompatActivity {
         btnchild.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RegisterType.this, RegisterActivity.class);
+                Intent intent = new Intent(RegisterType.this, ChildRegisterActivity.class);
                 intent.putExtra("PorC",1);
                 startActivity(intent);
             }
@@ -30,7 +29,7 @@ public class RegisterType extends AppCompatActivity {
         btnparents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RegisterType.this, RegisterActivity.class);
+                Intent intent = new Intent(RegisterType.this, ParentsRegisterActivity.class);
                 intent.putExtra("PorC",0);
                 startActivity(intent);
             }

@@ -1,3 +1,55 @@
+
 <resources>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="app_name">blueday4meals</string>
+
+    <string-array name="Citydo">
+        <item>서울특별시</item>
+        <item>부산광역시</item>
+        <item>대구광역시</item>
+        <item>인청광역시</item>
+        <item>광주광역시</item>
+        <item>대전광역시</item>
+        <item>울산광역시</item>
+        <item>세종특별자치시</item>
+        <item>경기도</item>
+        <item>강원도</item>
+        <item>충청북도</item>
+        <item>충청남도</item>
+        <item>전라북도</item>
+        <item>전라남도</item>
+        <item>경상북도</item>
+        <item>경상남도</item>
+        <item>제추특별자치도</item>
+    </string-array>
+
+    <string-array name="Chungbuk">
+        <item>청주시</item>
+        <item>충주시</item>
+        <item>제천시</item>
+        <item>보은군</item>
+        <item>옥천군</item>
+        <item>영동군</item>
+        <item>증평군</item>
+        <item>진천군</item>
+        <item>괴산군</item>
+        <item>음성군</item>
+        <item>단양군</item>
+    </string-array>
 </resources>

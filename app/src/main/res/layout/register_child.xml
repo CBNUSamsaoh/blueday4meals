@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#E4DDFF"
+    tools:context=".ChildRegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="204dp"
+        android:alpha="0.75"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/login_pic1" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="37dp"
+        android:alpha="0.75"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/login_pic2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="37dp"
+        android:alpha="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_pic3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="199dp"
+        android:layout_marginEnd="37dp"
+        android:alpha="0.75"
+        android:rotation="27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_pic4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <com.example.blueday4meals.CustomTextOutLineView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dongle"
+            android:gravity="center"
+            android:text="회원가입"
+            android:layout_weight="2"
+            android:textColor="#CEC2FF"
+            android:textSize="80sp"
+            app:textStroke="true"
+            app:textStrokeColor="#E4E7FF"
+            app:textStrokeWidth="20.0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/cid"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/dongle"
+                android:hint="아이디(영문, 숫자 5~12자)"
+                android:inputType="text"
+                android:maxLines="1"
+                android:maxLength="12"
+                android:textSize="30dp" />
+
+            <com.example.blueday4meals.CustomButtonOutLineView
+                android:id="@+id/idcheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_button"
+                android:fontFamily="@font/dongle"
+                android:text="중복확인"
+                android:textColor="#E4E7FF"
+                android:textSize="40sp"
+                app:textStroke="true"
+                app:textStrokeColor="#CEC2FF"
+                app:textStrokeWidth="20.0" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/cpwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:hint="비밀번호(영문, 숫자, 특수문자 조합 최소 8자)"
+            android:inputType="textPassword"
+            android:fontFamily="@font/dongle"
+            android:textSize="30dp"
+            android:maxLines="1"
+            android:maxLength="50"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/cpwdR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:hint="비밀번호 확인"
+            android:inputType="textPassword"
+            android:fontFamily="@font/dongle"
+            android:textSize="30dp"
+            android:maxLines="1"
+            android:maxLength="50"
+            android:layout_weight="1"/>
+
+        <DatePicker
+            android:id="@+id/cBirth"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner" />
+
+        <RadioGroup
+            android:id="@+id/cGender"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/male" >
+
+            <com.example.blueday4meals.CustomRadioOutlineView
+                android:id="@+id/male"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_button"
+                android:fontFamily="@font/dongle"
+                android:gravity="center_vertical"
+                android:text="     남"
+                android:textColor="#E4E7FF"
+                android:textSize="40sp"
+                app:textStroke="true"
+                app:textStrokeColor="#CEC2FF"
+                app:textStrokeWidth="20.0" />
+
+            <com.example.blueday4meals.CustomRadioOutlineView
+                android:id="@+id/female"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_button"
+                android:fontFamily="@font/dongle"
+                android:gravity="center_vertical"
+                android:text="     여"
+                android:textColor="#E4E7FF"
+                android:textSize="40sp"
+                app:textStroke="true"
+                app:textStrokeColor="#CEC2FF"
+                app:textStrokeWidth="20.0" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.example.blueday4meals.CustomButtonOutLineView
+                android:id="@+id/cRegion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_button"
+                android:fontFamily="@font/dongle"
+                android:text="도/특별시/광역시"
+                android:textColor="#E4E7FF"
+                android:textSize="40sp"
+                app:textStroke="true"
+                app:textStrokeColor="#CEC2FF"
+                app:textStrokeWidth="20.0" />
+
+            <com.example.blueday4meals.CustomButtonOutLineView
+                android:id="@+id/cRegion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_button"
+                android:fontFamily="@font/dongle"
+                android:text="시/군/구"
+                android:textColor="#E4E7FF"
+                android:textSize="40sp"
+                app:textStroke="true"
+                app:textStrokeColor="#CEC2FF"
+                app:textStrokeWidth="20.0" />
+
+        </LinearLayout>
+
+        <com.example.blueday4meals.CustomButtonOutLineView
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dongle"
+            android:gravity="center"
+            android:text="등록하기"
+            android:background="#00FFFFFF"
+            android:layout_weight="1"
+            android:textColor="#E4E7FF"
+            android:textSize="40sp"
+            app:textStroke="true"
+            app:textStrokeColor="#CEC2FF"
+            app:textStrokeWidth="20.0" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
