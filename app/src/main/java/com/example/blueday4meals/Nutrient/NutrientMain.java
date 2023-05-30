@@ -26,7 +26,7 @@ public class NutrientMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.child_nutrient);
+        setContentView(R.layout.nutrition_main);
 
         String userID = getIntent().getStringExtra("userID");
         int Cal = getIntent().getIntExtra("needCal", 0);

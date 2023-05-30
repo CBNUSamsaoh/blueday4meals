@@ -1,20 +1,401 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".CalcNutrition">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="738dp"
+        android:orientation="vertical"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/textView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="영양소 였어야 했던것"
-            android:textSize="110dp"
-            android:layout_weight="1"/>
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="84dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/mainfont"
+                android:gravity="center"
+                android:hint="년도선택"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/yearSpinner"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/yearSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.07"
+                app:layout_constraintLeft_toRightOf="@id/tv_year"
+                app:layout_constraintRight_toLeftOf="@id/tv_month"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.022" />
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/dongle"
+                android:gravity="center"
+                android:hint="월선택"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toRightOf="@id/yearSpinner"
+                app:layout_constraintRight_toLeftOf="@id/monthSpinner"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.008" />
+
+            <Spinner
+                android:id="@+id/monthSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toRightOf="@id/tv_month"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.022" />
+        </LinearLayout>
+
+        <CalendarView
+            android:id="@+id/cv_nutrition"
+            android:layout_width="match_parent"
+            android:layout_height="144dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="126dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/mainfont"
+                android:gravity="center"
+                android:text="하루 섭취량"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/tv_energyIntake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:fontFamily="@font/mainfont"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="34sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mainfont"
+                android:textSize="34sp"
+                android:text=" / " />
+
+            <TextView
+                android:id="@+id/tv_energyStandard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mainfont"
+                android:gravity="center"
+                android:text="2000"
+                android:textSize="34sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mainfont"
+                android:textSize="34sp"
+                android:text=" kcal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="109dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:fontFamily="@font/mainfont"
+                    android:gravity="center"
+                    android:text="탄수화물"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+                <ProgressBar
+                    android:id="@+id/pb_carbs"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="90dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center"
+                    android:max="200"
+                    android:progress="0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_carbsIntake"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:text="0"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:text=" / "
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/tv_carbsStandard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:text="200"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:text=" g"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:fontFamily="@font/mainfont"
+                    android:gravity="center"
+                    android:text="단백질"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+                <ProgressBar
+                    android:id="@+id/pb_protein"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="90dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center"
+                    android:max="100"
+                    android:progress="0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_proteinIntake"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:textSize="30sp"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:textSize="30sp"
+                        android:text=" / " />
+
+                    <TextView
+                        android:id="@+id/tv_proteinStandard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:textSize="30sp"
+                        android:text="200" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:textSize="30sp"
+                        android:text=" g" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:fontFamily="@font/mainfont"
+                    android:gravity="center"
+                    android:text="지방"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+                <ProgressBar
+                    android:id="@+id/pb_fat"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="90dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center"
+                    android:max="100"
+                    android:progress="20" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_fatIntake"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:textSize="30sp"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:textSize="30sp"
+                        android:text=" / " />
+
+                    <TextView
+                        android:id="@+id/tv_fatStandard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:textSize="30sp"
+                        android:text="200" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:textSize="30sp"
+                        android:text=" g" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:fontFamily="@font/mainfont"
+                    android:gravity="center"
+                    android:text="식이섬유"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+                <ProgressBar
+                    android:id="@+id/pb_fiber"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="90dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center"
+                    android:max="100"
+                    android:progress="50" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_fiberIntake"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:textSize="30sp"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:textSize="30sp"
+                        android:text=" / " />
+
+                    <TextView
+                        android:id="@+id/tv_fiberStandard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:textSize="30sp"
+                        android:text="200" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dongle"
+                        android:textSize="30sp"
+                        android:text=" g" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="생년월일(임시)" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,7 +434,6 @@
                 android:text="설정" />
 
         </LinearLayout>
-
 
     </LinearLayout>
 

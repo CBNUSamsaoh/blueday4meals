@@ -207,7 +207,6 @@ public class ChildRegisterActivity extends AppCompatActivity {
                     }
                 };
 
-
                 if (id.length() >= 5) {
                     if (pwd.length() >= 8) {
                         if (validate) {
