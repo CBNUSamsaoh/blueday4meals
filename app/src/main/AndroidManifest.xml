@@ -42,6 +42,12 @@
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="g9m45hxvbu" />
+        <meta-data
+            android:name="com.doinglab.foodlens.sdk.apptoken"
+            android:value="@string/foodlens_app_token"/>
+        <meta-data
+            android:name="com.doinglab.foodlens.sdk.companytoken"
+            android:value="@string/foodlens_company_token"/>
    </application>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 </manifest>

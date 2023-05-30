@@ -32,7 +32,7 @@ dependencies {
     configurations.all {
         resolutionStrategy.force 'com.github.bumptech.glide:glide:4.7.1'
     }
-
+    implementation "com.doinglab.foodlens:FoodLens:2.5.1"
     implementation 'com.github.bumptech.glide:glide:4.7.1'
     implementation 'com.squareup.retrofit2:retrofit:2.0.0'
     implementation 'com.google.code.gson:gson:2.8.9'

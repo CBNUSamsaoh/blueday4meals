@@ -12,6 +12,13 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
@@ -20,7 +27,6 @@
         android:name="android.hardware.wifi"
         android:required="false" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <queries>
@@ -28,6 +34,26 @@
         <!-- Needs to be explicitly declared on Android R+ -->
         <package android:name="com.google.android.apps.maps" />
     </queries>
+    <!--
+         Have developers add this. We don't want AUDIO permission to be auto-added to
+         apps that just want to take pictures.
+    -->
+    <!-- uses-permission android:name="android.permission.RECORD_AUDIO" / -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <permission
         android:name="com.example.blueday4meals.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -45,7 +71,6 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.Blueday4meals"
         android:usesCleartextTraffic="true" >
         <meta-data
@@ -78,7 +103,42 @@
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="g9m45hxvbu" />
+        <meta-data
+            android:name="com.doinglab.foodlens.sdk.apptoken"
+            android:value="@string/foodlens_app_token" />
+        <meta-data
+            android:name="com.doinglab.foodlens.sdk.companytoken"
+            android:value="@string/foodlens_company_token" />
 
+        <activity
+            android:name="com.doinglab.foodlens.sdk.ui.app.activity.FoodLensCameraActivity"
+            android:minAspectRatio="1.5"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/FoodLensTheme.NoActionBar" />
+        <activity
+            android:name="com.doinglab.foodlens.sdk.ui.app.activity.FoodLensFoodInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FoodLensTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.doinglab.foodlens.sdk.ui.app.activity.FoodLensNutritionInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FoodLensTheme.NoActionBar" />
+        <activity
+            android:name="com.doinglab.foodlens.sdk.ui.app.activity.FoodLensSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FoodLensTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.doinglab.foodlens.sdk.ui.app.activity.FoodLensFoodEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FoodLensTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.doinglab.foodlens.sdk.ui.app.activity.FoodLensHelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FoodLensTheme.NoActionBar" />
         <activity
             android:name="com.naver.maps.map.app.LegendActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
@@ -102,6 +162,40 @@
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.example.blueday4meals.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <meta-data
             android:name="com.google.android.gms.version"
